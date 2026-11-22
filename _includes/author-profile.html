@@ -8,7 +8,11 @@
 
   {% comment %} Section icon in an oval instead of a photo {% endcomment %}
   {% assign py_icon = "fa-user-graduate" %}{% assign py_label = "Profile" %}
-  {% if page.collection == "publications" or page.url contains "/publication" %}
+  {% if page.url contains "/research" %}
+    {% assign py_icon = "fa-microscope" %}{% assign py_label = "Research" %}
+  {% elsif page.url contains "/journey" %}
+    {% assign py_icon = "fa-route" %}{% assign py_label = "Academic Journey" %}
+  {% elsif page.collection == "publications" or page.url contains "/publication" %}
     {% assign py_icon = "fa-file-lines" %}{% assign py_label = "Publications" %}
   {% elsif page.collection == "talks" or page.url contains "/talk" %}
     {% assign py_icon = "fa-microphone-lines" %}{% assign py_label = "Talks" %}

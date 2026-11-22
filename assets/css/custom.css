@@ -353,3 +353,212 @@ td { border-color: var(--py-rule); }
   .py-ta-stats { grid-template-columns: 1fr; }
   .py-ta-tag { margin: 6px 0 0 0; }
 }
+
+/* ==========================================================================
+   Shared bits for Research and Academic Journey pages
+   ========================================================================== */
+.py-lead {
+  font-size: 1.22rem;
+  line-height: 1.7;
+  color: var(--py-text);
+  border-left: 3px solid var(--py-gold);
+  padding: 4px 0 4px 18px;
+  margin: 0 0 2em 0;
+}
+h2.py-sec {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--py-gold);
+  border-bottom: 1px solid var(--py-rule);
+  padding-bottom: 10px;
+  margin: 2.6em 0 1.2em 0;
+}
+
+/* ---- Research page ---- */
+.py-thesis {
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-top: 2px solid var(--py-gold);
+  border-radius: 6px;
+  padding: 22px 26px;
+  margin: 0 0 1.6em 0;
+}
+.py-kicker {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--py-gold-soft);
+  margin: 0 0 8px 0;
+}
+.py-thesis h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--py-heading);
+  margin: 0;
+}
+.py-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.6em 0; }
+.py-duo > div {
+  text-align: center;
+  padding: 18px 16px;
+  border: 1px dashed rgba(201,169,110,0.45);
+  border-radius: 6px;
+}
+.py-duo-k { display: block; font-family: 'Inter', sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--py-gold); }
+.py-duo-t { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.45rem; font-weight: 600; color: var(--py-heading); margin-top: 4px; }
+.py-duo-d { display: block; font-size: 0.98rem; color: var(--py-text-dim); }
+.py-parts { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin: 1.8em 0 0 0; }
+.py-part {
+  display: flex;
+  flex-direction: column;
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-left: 3px solid var(--py-gold);
+  border-radius: 6px;
+  padding: 18px 20px;
+}
+.py-part-n { font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--py-gold-soft); }
+.py-part h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.32rem; font-weight: 600; line-height: 1.3; color: var(--py-heading); margin: 6px 0 8px 0; }
+.py-part p { font-size: 0.98rem; line-height: 1.55; margin: 0 0 10px 0; }
+.py-part p.py-gap { font-style: italic; color: var(--py-text-dim); }
+.py-part a { margin-top: auto; font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.5px; }
+.py-dirs { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.py-dir {
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-top: 2px solid var(--py-gold);
+  border-radius: 6px;
+  padding: 22px 22px 18px 22px;
+}
+.py-dir i { font-size: 1.5rem; color: var(--py-gold-soft); }
+.py-dir h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.38rem; font-weight: 600; line-height: 1.3; color: var(--py-heading); margin: 12px 0 8px 0; }
+.py-dir p { font-size: 1rem; line-height: 1.6; margin: 0; color: var(--py-text); }
+.py-research-foot { display: flex; flex-wrap: wrap; gap: 12px; margin: 2.6em 0 1em 0; }
+.py-research-foot a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 20px;
+  border: 1px solid rgba(224,204,159,0.4);
+  border-radius: 999px;
+}
+.py-research-foot a:hover { background: var(--py-gold-soft); color: var(--py-bg); }
+
+/* ---- Academic Journey page ---- */
+.py-jr { position: relative; padding-left: 34px; margin-bottom: 1.5em; }
+.py-jr::before {
+  content: "";
+  position: absolute;
+  left: 9px; top: 0; bottom: 10px;
+  width: 1px;
+  background: linear-gradient(var(--py-gold), var(--py-rule));
+}
+.py-jr-inst { position: relative; margin: 0 0 18px -34px; padding-left: 34px; }
+.py-jr-inst:not(:first-child) { margin-top: 2.4em; }
+.py-jr-inst::before {
+  content: "";
+  position: absolute;
+  left: 2px; top: 22px;
+  width: 15px; height: 15px;
+  border-radius: 50%;
+  background: var(--py-gold);
+  box-shadow: 0 0 0 4px var(--py-bg), 0 0 0 5px rgba(201,169,110,0.4);
+}
+.py-jr-photo {
+  position: relative;
+  height: 210px;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--py-rule);
+  border-bottom: none;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(201,169,110,0.18), transparent 60%),
+    linear-gradient(135deg, #1b2840, #101a2b);
+}
+.py-jr-photo::after {                  /* placeholder text, hidden behind a real photo */
+  content: attr(data-name);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: rgba(224,204,159,0.35);
+}
+.py-jr-photo img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.85) brightness(0.85);
+}
+.py-jr-inst-head {
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-top: 2px solid var(--py-gold);
+  border-radius: 0 0 8px 8px;
+  padding: 12px 18px;
+}
+.py-jr-inst-name { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 600; color: var(--py-heading); line-height: 1.25; }
+.py-jr-inst-sub { display: block; font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--py-gold-soft); margin-top: 2px; }
+.py-jr-item {
+  position: relative;
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin: 0 0 12px 0;
+}
+.py-jr-item::before {
+  content: "";
+  position: absolute;
+  left: -30px; top: 20px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--py-bg);
+  border: 2px solid var(--py-gold);
+}
+.py-jr-now::before { background: var(--py-gold); box-shadow: 0 0 0 4px rgba(201,169,110,0.18); }
+.py-jr-award { border-left: 3px solid var(--py-gold); }
+.py-jr-date { display: block; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--py-gold-soft); }
+.py-jr-title { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.32rem; font-weight: 600; line-height: 1.3; color: var(--py-heading); margin: 4px 0 2px 0; }
+.py-jr-sub { display: block; font-size: 0.98rem; color: var(--py-text-dim); }
+.py-jr-note { display: block; font-size: 0.98rem; color: var(--py-text); margin-top: 6px; }
+.py-jr-milestones { position: relative; margin: 6px 0 12px 0; }
+.py-jr-milestones::before {
+  content: "";
+  position: absolute;
+  left: -30px; top: 8px;
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: var(--py-bg);
+  border: 2px solid var(--py-gold);
+}
+.py-jr-ms-year { display: block; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; color: var(--py-gold-soft); margin-bottom: 8px; }
+.py-jr-ms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.py-jr-ms {
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-top: 2px solid var(--py-gold);
+  border-radius: 6px;
+  padding: 12px 14px;
+}
+.py-jr-ms-t { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; font-weight: 600; line-height: 1.25; color: var(--py-heading); }
+.py-jr-ms-s { display: block; font-size: 0.92rem; color: var(--py-text-dim); margin-top: 4px; }
+
+@media (max-width: 700px) {
+  .py-duo, .py-parts, .py-dirs, .py-jr-ms-grid { grid-template-columns: 1fr; }
+  .py-jr-photo { height: 160px; }
+}

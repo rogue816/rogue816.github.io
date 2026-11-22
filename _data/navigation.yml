@@ -1,8 +1,12 @@
 main:
   - title: "Home"
     url: "/"
+  - title: "Research"
+    url: "/research/"
   - title: "Publications"
     url: "/publications/"
+  - title: "Academic Journey"
+    url: "/journey/"
   - title: "CV"
     url: "/cv/"
   - title: "Teaching"

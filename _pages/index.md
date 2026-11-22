@@ -61,8 +61,21 @@ author_profile: false
     letter-spacing: 5px;
     margin: 0 0 22px 0;
   }
-  .py-intro { font-size: 1.24rem; line-height: 1.7; margin: 0; }
+  .py-intro { font-size: 1.2rem; line-height: 1.7; margin: 0 0 14px 0; }
   .py-intro strong { color: var(--py-heading); font-weight: 500; }
+  .py-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+  .py-cta a {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 8px 20px;
+    border: 1px solid rgba(224,204,159,0.4);
+    border-radius: 999px;
+    transition: all 0.2s ease;
+  }
+  .py-cta a.py-solid { background: var(--py-gold-soft); color: var(--py-bg); border-color: var(--py-gold-soft); }
+  .py-cta a:hover { background: var(--py-gold); color: var(--py-bg); border-color: var(--py-gold); }
 
   /* ---- Section labels ---- */
   .py-label {
@@ -76,98 +89,12 @@ author_profile: false
     padding-bottom: 10px;
     border-bottom: 1px solid var(--py-rule);
   }
+  .py-label-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--py-rule); margin: 0 0 18px 0; }
+  .py-label-row .py-label { border: none; margin: 0; }
+  .py-label-row a { font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 1px; white-space: nowrap; }
   .py-block { padding: 52px 8px 0 8px; }
 
-  /* ---- News + Timeline (side by side) ---- */
-  .py-two { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; }
-  .py-news { list-style: none; margin: 0; padding: 0; }
-  .py-news li {
-    display: grid;
-    grid-template-columns: 86px 1fr;
-    gap: 16px;
-    padding: 12px 0;
-    border-bottom: 1px dashed var(--py-rule);
-    font-size: 1.05rem;
-    line-height: 1.55;
-  }
-  .py-news li:last-child { border-bottom: none; }
-  .py-date {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--py-gold-soft);
-    background: rgba(201,169,110,0.10);
-    border: 1px solid rgba(201,169,110,0.30);
-    border-radius: 4px;
-    padding: 4px 0;
-    text-align: center;
-    height: fit-content;
-    margin-top: 3px;
-  }
-  .py-news em { color: var(--py-heading); }
-
-  .py-timeline { list-style: none; margin: 0; padding: 0 0 0 4px; position: relative; }
-  .py-timeline::before {
-    content: "";
-    position: absolute;
-    left: 9px; top: 8px; bottom: 8px;
-    width: 1px;
-    background: linear-gradient(var(--py-gold), var(--py-rule));
-  }
-  .py-timeline li { position: relative; padding: 0 0 24px 34px; }
-  .py-timeline li:last-child { padding-bottom: 0; }
-  .py-timeline li::before {
-    content: "";
-    position: absolute;
-    left: 0; top: 6px;
-    width: 11px; height: 11px;
-    border-radius: 50%;
-    background: var(--py-bg);
-    border: 2px solid var(--py-gold);
-  }
-  .py-timeline li.py-now::before { background: var(--py-gold); box-shadow: 0 0 0 4px rgba(201,169,110,0.18); }
-  .py-tl-year {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--py-gold-soft);
-  }
-  .py-tl-title { display: block; color: var(--py-heading); font-size: 1.12rem; font-weight: 500; margin-top: 2px; }
-  .py-tl-sub { display: block; color: var(--py-text-dim); font-size: 1rem; line-height: 1.5; }
-
-  /* ---- Research interest boxes ---- */
-  .py-grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .py-box {
-    background: var(--py-bg-raised);
-    border: 1px solid var(--py-rule);
-    border-top: 2px solid var(--py-gold);
-    border-radius: 6px;
-    padding: 22px 20px 20px 20px;
-    transition: transform 0.2s ease, border-color 0.2s ease;
-  }
-  .py-box:hover { transform: translateY(-3px); border-color: #3a4a6a; border-top-color: var(--py-gold-soft); }
-  .py-box-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.6rem;
-    color: var(--py-gold);
-    line-height: 1;
-  }
-  .py-box h4 {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.25;
-    color: var(--py-heading);
-    margin: 10px 0 8px 0;
-  }
-  .py-box p { margin: 0; font-size: 0.98rem; line-height: 1.55; color: var(--py-text-dim); }
-
-  /* ---- Recent publication cards ---- */
+  /* ---- Latest news: featured paper cards ---- */
   .py-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
   .py-paper {
     display: flex;
@@ -176,26 +103,39 @@ author_profile: false
     border: 1px solid var(--py-rule);
     border-left: 3px solid var(--py-gold);
     border-radius: 6px;
-    padding: 24px 26px;
+    padding: 22px 24px;
+  }
+  .py-paper-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 10px 0; }
+  .py-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--py-gold-soft);
+    background: rgba(201,169,110,0.10);
+    border: 1px solid rgba(201,169,110,0.30);
+    border-radius: 4px;
+    padding: 3px 9px;
+    white-space: nowrap;
   }
   .py-venue {
     font-family: 'Inter', sans-serif;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    color: var(--py-gold-soft);
-    margin: 0 0 10px 0;
+    color: var(--py-text-dim);
   }
   .py-paper h4 {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.42rem;
+    font-size: 1.4rem;
     font-weight: 600;
     line-height: 1.28;
     color: var(--py-heading);
     margin: 0 0 8px 0;
   }
-  .py-authors { font-size: 1rem; color: var(--py-text-dim); margin: 0 0 12px 0; }
+  .py-authors { font-size: 1rem; color: var(--py-text-dim); margin: 0 0 10px 0; }
   .py-authors strong { color: var(--py-text); font-weight: 500; }
   .py-paper p.py-sum { font-size: 1.02rem; line-height: 1.6; margin: 0 0 18px 0; }
   .py-actions { margin-top: auto; display: flex; gap: 10px; flex-wrap: wrap; }
@@ -210,10 +150,71 @@ author_profile: false
     transition: all 0.2s ease;
   }
   .py-actions a:hover, .py-links a:hover { background: var(--py-gold-soft); color: var(--py-bg); }
-  .py-more { text-align: right; margin: 16px 0 0 0; font-family: 'Inter', sans-serif; font-size: 0.85rem; letter-spacing: 1px; }
+
+  /* ---- News lists ---- */
+  .py-news { list-style: none; margin: 0; padding: 0; }
+  .py-news li {
+    display: grid;
+    grid-template-columns: 92px 1fr;
+    gap: 16px;
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--py-rule);
+    font-size: 1.04rem;
+    line-height: 1.55;
+  }
+  .py-news li:last-child { border-bottom: none; }
+  .py-news .py-date { text-align: center; height: fit-content; margin-top: 3px; }
+  .py-news em { color: var(--py-heading); }
+  .py-news-more { margin-top: 18px; }
+  .py-past { margin-top: 40px; }
+  .py-past .py-label { color: var(--py-text-dim); }
+  .py-past .py-news li { font-size: 1rem; color: var(--py-text-dim); }
+  .py-past .py-news em { color: var(--py-text); }
+  .py-past .py-date { color: var(--py-text-dim); background: transparent; border-color: var(--py-rule); }
+
+  /* ---- Research interest boxes ---- */
+  .py-grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .py-box {
+    display: block;
+    background: var(--py-bg-raised);
+    border: 1px solid var(--py-rule);
+    border-top: 2px solid var(--py-gold);
+    border-radius: 6px;
+    padding: 22px 20px 20px 20px;
+    color: var(--py-text);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .py-box:hover { transform: translateY(-3px); border-color: #3a4a6a; border-top-color: var(--py-gold-soft); color: var(--py-text); }
+  .py-box-num { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.6rem; color: var(--py-gold); line-height: 1; }
+  .py-box h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--py-heading);
+    margin: 10px 0 8px 0;
+  }
+  .py-box p { margin: 0; font-size: 0.98rem; line-height: 1.55; color: var(--py-text-dim); }
 
   /* ---- Philosophy, contact, connect, visitors ---- */
-  .py-narrow { max-width: 760px; margin: 0 auto; }
+  .py-narrow { max-width: 780px; margin: 0 auto; }
+  .py-shloka {
+    text-align: center;
+    padding: 28px 24px 24px 24px;
+    background: var(--py-bg-raised);
+    border: 1px solid var(--py-rule);
+    border-top: 2px solid var(--py-gold);
+    border-radius: 6px;
+  }
+  .py-shloka .py-sa {
+    font-family: 'Noto Serif Devanagari', 'Tiro Devanagari Sanskrit', serif;
+    font-size: 1.45rem;
+    line-height: 1.9;
+    color: var(--py-gold-soft);
+    margin: 0;
+  }
+  .py-shloka .py-tr { font-style: italic; font-size: 1.12rem; color: var(--py-text); margin: 14px auto 0 auto; max-width: 600px; }
+  .py-bridge { text-align: center; color: var(--py-text-dim); font-size: 1.08rem; margin: 26px auto 22px auto; max-width: 640px; }
   .py-quote {
     margin: 0;
     padding: 20px 26px;
@@ -241,23 +242,22 @@ author_profile: false
   .py-visitors img { max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--py-rule); box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
 
   /* ---- Responsive ---- */
-  @media (max-width: 960px) {
-    .py-grid4 { grid-template-columns: repeat(2, 1fr); }
-  }
+  @media (max-width: 960px) { .py-grid4 { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 800px) {
     .py-home { padding-top: 32px; }
     .py-hero { grid-template-columns: 1fr; gap: 36px; text-align: center; }
     .py-portrait { max-width: 230px; margin: 0 auto; }
     .py-divider { margin: 18px auto 14px auto; }
     .py-tagline { letter-spacing: 3px; font-size: 0.78rem; }
-    .py-intro { font-size: 1.12rem; }
-    .py-two, .py-grid2 { grid-template-columns: 1fr; }
-    .py-two { gap: 52px; }
+    .py-intro { font-size: 1.1rem; }
+    .py-cta { justify-content: center; }
+    .py-grid2 { grid-template-columns: 1fr; }
   }
   @media (max-width: 520px) {
     .py-grid4 { grid-template-columns: 1fr; }
     .py-news li { grid-template-columns: 1fr; gap: 6px; }
-    .py-date { width: fit-content; padding: 4px 10px; }
+    .py-news .py-date { width: fit-content; }
+    .py-shloka .py-sa { font-size: 1.2rem; }
   }
 </style>
 
@@ -269,65 +269,67 @@ author_profile: false
 <h1>Pankaj Yadav</h1>
 <div class="py-divider"></div>
 <p class="py-tagline">Probabilistic AI Research</p>
-<p class="py-intro">Hi! I am <strong>Pankaj Yadav</strong>, a PhD researcher focusing on mitigating AI data bias, statistical inference, and deep generative models across healthcare, solar energy, and finance.</p>
+<p class="py-intro">Hi! I am <strong>Pankaj Yadav</strong>, a PhD researcher working on mitigating AI data bias, statistical inference, and deep generative models. My work connects their theoretical foundations to practice through downstream applications, mainly in finance, climate, and healthcare, and I publish actively across these areas.</p>
+<p class="py-intro">I would love to collaborate on interdisciplinary ideas, so please feel free to get in touch and drop me a message.</p>
+<div class="py-cta">
+<a class="py-solid" href="mailto:yadav.58@iitj.ac.in">Get in touch</a>
+<a href="{{ base_path }}/research/">My research</a>
+</div>
 </div>
 </section>
-<!-- ================= NEWS + ACADEMIC JOURNEY ================= -->
-<section class="py-block py-two">
-<div>
-<h3 class="py-label">News</h3>
-<ul class="py-news">
-<li><span class="py-date">Nov 2026</span><span>Paper <em>“Are Kolmogorov–Arnold Networks Suitable for Imbalanced Data Classification?”</em> published in IEEE Transactions on Emerging Topics in Computational Intelligence.</span></li>
-<li><span class="py-date">2026</span><span>Paper <em>“Hedging rainfall volatility in Indian agriculture: A quantile-gamma approach to weather derivatives”</em> published in the Journal of Climate Finance.</span></li>
-<li><span class="py-date">Feb 2025</span><span>Systematic mapping study of GANs for data imbalance released on arXiv.</span></li>
-<li><span class="py-date">Dec 2024</span><span>Solar PV power forecasting paper published at the International Advanced Computing Conference (IACC), Springer.</span></li>
-<li><span class="py-date">May 2022</span><span>Received the <em>Best Student Paper Award</em> at ICT4AWE 2022.</span></li>
-</ul>
+<!-- ================= LATEST NEWS ================= -->
+<section class="py-block">
+<div class="py-label-row"><h3 class="py-label">Latest News</h3><a href="{{ base_path }}/publications/">All publications →</a></div>
+<div class="py-grid2">
+<article class="py-paper">
+<div class="py-paper-top"><span class="py-date">Nov 2026</span><span class="py-venue">IEEE Trans. Emerging Topics in Computational Intelligence</span></div>
+<h4>Are Kolmogorov–Arnold Networks Suitable for Imbalanced Data Classification?</h4>
+<p class="py-authors"><strong>P. Yadav</strong> and V. Vijay</p>
+<p class="py-sum">Published. Evaluates Kolmogorov–Arnold Networks (KANs) under structured class imbalance against parameter-matched MLPs and XGBoost baselines.</p>
+<div class="py-actions"><a href="https://doi.org/10.1109/TETCI.2026.3747841" target="_blank" rel="noopener">DOI</a><a href="{{ base_path }}/publication/2026-kans-imbalance">Details</a></div>
+</article>
+<article class="py-paper">
+<div class="py-paper-top"><span class="py-date">2026</span><span class="py-venue">Journal of Climate Finance</span></div>
+<h4>Hedging Rainfall Volatility in Indian Agriculture: A Quantile-Gamma Approach to Weather Derivatives</h4>
+<p class="py-authors"><strong>P. Yadav</strong> and V. Vijay</p>
+<p class="py-sum">Published. A quantile–gamma XGBoost/SARIMA framework for weather-derivative triggers across drought and flood regimes.</p>
+<div class="py-actions"><a href="https://doi.org/10.1016/j.jclimf.2026.100082" target="_blank" rel="noopener">DOI</a><a href="{{ base_path }}/publication/2026-rainfall-hedging">Details</a></div>
+</article>
 </div>
-<div>
-<h3 class="py-label">Academic Journey</h3>
-<ul class="py-timeline">
-<li class="py-now"><span class="py-tl-year">Present</span><span class="py-tl-title">PhD in Mathematics</span><span class="py-tl-sub">Indian Institute of Technology (IIT) Jodhpur, Mathematics Department<br>Supervisor: Dr. Vivek Vijay</span></li>
-<li><span class="py-tl-year">2021</span><span class="py-tl-title">M.Sc. in Mathematics</span><span class="py-tl-sub">IIT Jodhpur</span></li>
-<li><span class="py-tl-year">2019</span><span class="py-tl-title">CSIR Junior Research Fellowship</span><span class="py-tl-sub">Council of Scientific &amp; Industrial Research, India</span></li>
-<li><span class="py-tl-year">2018</span><span class="py-tl-title">B.Sc. (Hons) in Mathematics</span><span class="py-tl-sub">University of Delhi</span></li>
+<ul class="py-news py-news-more">
+<li><span class="py-date">2026</span><span>Preprint <em>“Certified Interpolation Oversampling: Per-Instance Safety Guarantees for Imbalanced Learning”</em> released on arXiv.</span></li>
+<li><span class="py-date">Feb 2025</span><span>Preprint <em>“Rebalancing the scales: A systematic mapping study of GANs in addressing data imbalance”</em> released on arXiv.</span></li>
+</ul>
+<!-- ================= PAST NEWS ================= -->
+<div class="py-past">
+<h3 class="py-label">Past News</h3>
+<ul class="py-news">
+<li><span class="py-date">Dec 2024</span><span><em>Solar PV power generation forecasting</em> with AI and metaheuristics, published at the International Advanced Computing Conference (IACC), Springer.</span></li>
+<li><span class="py-date">Nov 2023</span><span><em>Prediction of muscle power in the elderly</em> using functional screening data, presented at IEEE MIPR 2023.</span></li>
+<li><span class="py-date">2023</span><span><em>Advantages of oversampling techniques</em> for fall-risk prediction, published in Springer CCIS (vol. 1856).</span></li>
+<li><span class="py-date">2023</span><span><em>Fall prediction using machine learning: a systematic review</em>, published in the American Journal of Biomedical Science &amp; Research.</span></li>
+<li><span class="py-date">May 2022</span><span>Received the <em>Best Student Paper Award</em> at ICT4AWE 2022 for our work on fall-risk factors in the elderly using SMOTE.</span></li>
 </ul>
 </div>
 </section>
 <!-- ================= RESEARCH INTERESTS ================= -->
 <section class="py-block">
-<h3 class="py-label">Research Interests</h3>
+<div class="py-label-row"><h3 class="py-label">Research Interests</h3><a href="{{ base_path }}/research/">Explore my research →</a></div>
 <div class="py-grid4">
-<div class="py-box"><div class="py-box-num">01</div><h4>Probabilistic Modeling &amp; Statistical Inference</h4><p>Quantifying uncertainty in real-world data, from tail risk to distributional forecasting.</p></div>
-<div class="py-box"><div class="py-box-num">02</div><h4>Deep Generative Models &amp; AI-based Data Generation</h4><p>GANs and other generative models that create realistic synthetic data where real samples are scarce.</p></div>
-<div class="py-box"><div class="py-box-num">03</div><h4>Imbalanced &amp; Rare-Event Learning</h4><p>Learning from minority classes and extreme events, with oversampling methods that come with guarantees.</p></div>
-<div class="py-box"><div class="py-box-num">04</div><h4>Interpretable ML for Critical Domains</h4><p>Healthcare, solar energy and climate finance, where models must be reliable and explainable.</p></div>
+<a class="py-box" href="{{ base_path }}/research/"><div class="py-box-num">01</div><h4>Rare Regions &amp; Imbalanced Learning</h4><p>Minority classes and distribution tails, with certified oversampling and cost-aware decision thresholds.</p></a>
+<a class="py-box" href="{{ base_path }}/research/"><div class="py-box-num">02</div><h4>Generative AI &amp; Interpretability</h4><p>GANs, autoencoders, diffusion models and NLP, towards explainable models and world models.</p></a>
+<a class="py-box" href="{{ base_path }}/research/"><div class="py-box-num">03</div><h4>Extreme Value Theory &amp; Tail Risk</h4><p>Modelling extremes for downstream decisions in climate and finance.</p></a>
+<a class="py-box" href="{{ base_path }}/research/"><div class="py-box-num">04</div><h4>Probabilistic Modeling &amp; Statistical Inference</h4><p>Quantifying uncertainty in real-world data, from healthcare to energy and markets.</p></a>
 </div>
-</section>
-<!-- ================= RECENT PUBLICATIONS ================= -->
-<section class="py-block">
-<h3 class="py-label">Recent Publications</h3>
-<div class="py-grid2">
-<article class="py-paper">
-<p class="py-venue">IEEE Trans. Emerging Topics in Computational Intelligence · 2026</p>
-<h4>Are Kolmogorov–Arnold Networks Suitable for Imbalanced Data Classification?</h4>
-<p class="py-authors"><strong>P. Yadav</strong> and V. Vijay</p>
-<p class="py-sum">Evaluates Kolmogorov–Arnold Networks (KANs) under structured class imbalance against parameter-matched MLPs and XGBoost baselines.</p>
-<div class="py-actions"><a href="https://doi.org/10.1109/TETCI.2026.3747841" target="_blank" rel="noopener">DOI</a><a href="{{ base_path }}/publication/2026-kans-imbalance">Details</a></div>
-</article>
-<article class="py-paper">
-<p class="py-venue">Journal of Climate Finance · 2026</p>
-<h4>Hedging Rainfall Volatility in Indian Agriculture: A Quantile-Gamma Approach to Weather Derivatives</h4>
-<p class="py-authors"><strong>P. Yadav</strong> and V. Vijay</p>
-<p class="py-sum">A quantile–gamma XGBoost/SARIMA framework for weather-derivative triggers across drought and flood regimes.</p>
-<div class="py-actions"><a href="https://doi.org/10.1016/j.jclimf.2026.100082" target="_blank" rel="noopener">DOI</a><a href="{{ base_path }}/publication/2026-rainfall-hedging">Details</a></div>
-</article>
-</div>
-<p class="py-more"><a href="{{ base_path }}/publications/">All publications →</a></p>
 </section>
 <!-- ================= PHILOSOPHY + CONTACT ================= -->
 <section class="py-block py-narrow">
 <h3 class="py-label">Philosophy &amp; Approach</h3>
+<div class="py-shloka">
+<p class="py-sa" lang="sa">स्वस्ति श्रीदेवसमन्ताय।<br>शर्मन्! श्रमेण स्वयं सर्वं साध्यम्।</p>
+<p class="py-tr">O seeker of peace! Through conscious inner effort, one can realize and master the entire universe within oneself.</p>
+</div>
+<p class="py-bridge">I carry this into research and life alike: steady, deliberate effort is how we meet an uncertain world.</p>
 <p class="py-quote">As uncertainty in the world increases—the inevitable Law of Thermodynamics—life will continue to surprise you. Keep Body, Soul, and Spirit in check, and the mortgage will be paid.</p>
 <p class="py-contact"><strong>Contact:</strong> <a href="mailto:yadav.58@iitj.ac.in">yadav.58@iitj.ac.in</a></p>
 </section>
@@ -335,10 +337,10 @@ author_profile: false
 <div class="py-connect">
 <h2>Connect with Me</h2>
 <div class="py-links">
-<a href="https://scholar.google.co.in/citations?hl=en" target="_blank" rel="noopener">Google Scholar</a>
+<a href="https://scholar.google.co.in/citations?hl=en&user=ejZNgHgAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
 <a href="https://www.linkedin.com/in/pankaj-yadav-867a40200?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener">LinkedIn</a>
 <a href="https://github.com/rogue816" target="_blank" rel="noopener">GitHub</a>
-<a href="https://orcid.org" target="_blank" rel="noopener">ORCID</a>
+<a href="https://orcid.org/0009-0009-1437-5659?lang=en" target="_blank" rel="noopener">ORCID</a>
 </div>
 </div>
 <!-- Live Flat Map Analytics Widget Section -->
