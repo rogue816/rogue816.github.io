@@ -14,8 +14,8 @@ title_separator: "-"
 name: &name "Pankaj Yadav"
 description: &description "PhD researcher in probabilistic modeling and AI-based data generation. My work explores generative approaches and uncertainty-aware learning for improving data efficiency and model robustness."
 url: "https://rogue816.github.io"
-baseurl: "/pankajyadav.github.io"
-repository: "rogue816/pankajyadav.github.io"
+baseurl: ""
+repository: "rogue816/rogue816.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -28,7 +28,7 @@ author:
   bio: "PhD researcher working on probabilistic modeling and AI-based data generation. My work spans healthcare, solar, finance, sports science, and patient mobility data, focusing on data efficiency, interpretability, and robustness."
   location: "India"
   employer: "PhD Researcher"
-  uri: "https://rogue816.github.io/pankajyadav.github.io"  # your website URL
+  uri: "https://rogue816.github.io"  # your website URL
   email: "yadav.58@iitj.ac.in"  # optional if you want to display email
 
 

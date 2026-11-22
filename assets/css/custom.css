@@ -83,9 +83,9 @@ a:hover { color: var(--py-gold); }
 .greedy-nav { background: transparent !important; }
 .greedy-nav a {
   font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--py-text-dim) !important;
   transition: color 0.2s ease;
@@ -561,4 +561,65 @@ h2.py-sec {
 @media (max-width: 700px) {
   .py-duo, .py-parts, .py-dirs, .py-jr-ms-grid { grid-template-columns: 1fr; }
   .py-jr-photo { height: 160px; }
+}
+
+/* ==========================================================================
+   CV page
+   ========================================================================== */
+.py-cv-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 1.6em 0; }
+.py-cv-actions a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 9px 22px;
+  border: 1px solid rgba(224,204,159,0.4);
+  border-radius: 999px;
+}
+.py-cv-actions a.py-solid { background: var(--py-gold-soft); color: var(--py-bg); border-color: var(--py-gold-soft); }
+.py-cv-actions a:hover { background: var(--py-gold); color: var(--py-bg); border-color: var(--py-gold); }
+.py-cv-frame {
+  width: 100%;
+  height: 820px;
+  border: 1px solid var(--py-rule);
+  border-radius: 6px;
+  background: var(--py-bg-raised);
+}
+.py-cv-note { font-size: 0.95rem; color: var(--py-text-dim); margin: 8px 0 0 0; }
+.py-skills { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.py-skill {
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-radius: 6px;
+  padding: 14px 18px;
+}
+.py-skill-k { display: block; font-family: 'Inter', sans-serif; font-size: 0.7rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--py-gold-soft); margin-bottom: 8px; }
+.py-chip {
+  display: inline-block;
+  margin: 0 6px 6px 0;
+  padding: 2px 11px;
+  font-size: 0.92rem;
+  color: var(--py-text);
+  border: 1px solid var(--py-rule);
+  border-radius: 999px;
+  background: var(--py-bg);
+}
+.py-cv-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.py-cv-link {
+  display: block;
+  background: var(--py-bg-raised);
+  border: 1px solid var(--py-rule);
+  border-top: 2px solid var(--py-gold);
+  border-radius: 6px;
+  padding: 16px 18px;
+  color: var(--py-text);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.py-cv-link:hover { transform: translateY(-2px); border-color: #3a4a6a; color: var(--py-text); }
+.py-cv-link i { color: var(--py-gold-soft); font-size: 1.15rem; }
+.py-cv-link b { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 600; color: var(--py-heading); margin: 6px 0 2px 0; }
+.py-cv-link span { display: block; font-size: 0.92rem; color: var(--py-text-dim); line-height: 1.45; }
+@media (max-width: 700px) {
+  .py-skills, .py-cv-links { grid-template-columns: 1fr; }
+  .py-cv-frame { height: 520px; }
 }

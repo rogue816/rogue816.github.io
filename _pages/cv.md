@@ -9,50 +9,30 @@ redirect_from:
 
 {% include base_path %}
 
-<a href="{{ '/files/Pankaj_Yadav_CV.pdf' | relative_url }}" class="btn btn--info" target="_blank" style="margin-bottom: 30px;">📥 Download Full CV (PDF)</a>
+<p class="py-lead">Ph.D. candidate in Mathematics at IIT Jodhpur (expected Dec 2026), working on learning and decision-making in rare regions: imbalanced data, distribution tails, and generative models, with applications in healthcare, climate, and finance.</p>
 
-Research Interests
-======
-Learning from imbalanced and rare-event data; certified and theoretically grounded oversampling; generative models (GANs, VAEs, diffusion) for data augmentation; cost-aware decision thresholds and calibration under prevalence shift; interpretable machine learning for healthcare (geriatrics, sarcopenia, fall risk); tail-risk modelling in climate finance.
+<div class="py-cv-actions">
+<a class="py-solid" href="{{ base_path }}/files/Pankaj_Yadav_CV.pdf" download>Download CV (PDF)</a>
+<a href="{{ base_path }}/files/Pankaj_Yadav_CV.pdf" target="_blank" rel="noopener">Open in new tab</a>
+</div>
 
-Education
-======
-* **Ph.D. in Mathematics** (Jan 2022 – Dec 2026, Expected)
-  * **Indian Institute of Technology Jodhpur**, India
-  * *Thesis:* Rare Regions in Learning and Decision-Making: Certified Oversampling, Local Support, and Thresholds
-  * *Supervisor:* Dr. V. V. M. S. Chandramouli | Dr. Vivek Vijay (Former) | *CGPA:* 8.7/10
-* **M.Sc. in Mathematics** (2019 – 2021)
-  * **Indian Institute of Technology Jodhpur**, India
-  * *CGPA:* 7.36/10
-* **B.Sc. (Hons.) in Mathematics** (2015 – 2018)
-  * **University of Delhi**, New Delhi, India
-  * *CGPA:* 6.662/10
+<iframe class="py-cv-frame" src="{{ base_path }}/files/Pankaj_Yadav_CV.pdf#view=FitH" title="Pankaj Yadav CV (PDF)" loading="lazy"></iframe>
+<p class="py-cv-note">If the preview does not load on your device, use the download button above.</p>
 
-Doctoral Research
-======
-The thesis studies rare regions, sparse minority classes and distribution tails, and how they affect learning and downstream decisions. It is organised in four parts:
-* **Generation — CISO:** An interpolation oversampler with the first per-instance certified clearance guarantee in its family, plus a provably monotone safety parameter. Evaluated across 39,900 fold-level runs.
-* **Diagnosis — KANs under imbalance:** A parameter-matched comparison of Kolmogorov–Arnold Networks, MLPs, and XGBoost across 10 datasets.
-* **Admissibility — SAvRAC:** A cost-aware threshold framework for three clinical care settings featuring a unique dataset suitability metric.
-* **Transfer — rainfall hedging:** Extends tail-risk logic via a quantile–gamma XGBoost/SARIMA framework for weather-derivative triggers.
+<h2 class="py-sec">Technical Skills</h2>
+<div class="py-skills">
+<div class="py-skill"><span class="py-skill-k">Programming</span><span class="py-chip">Python</span><span class="py-chip">R</span></div>
+<div class="py-skill"><span class="py-skill-k">ML / DL Frameworks</span><span class="py-chip">PyTorch</span><span class="py-chip">TensorFlow</span><span class="py-chip">scikit-learn</span></div>
+<div class="py-skill"><span class="py-skill-k">Methodologies</span><span class="py-chip">Imbalanced learning</span><span class="py-chip">Oversampling (SMOTE variants, GANs, VAEs, diffusion)</span><span class="py-chip">KANs</span><span class="py-chip">Cost-sensitive thresholding</span><span class="py-chip">Probability calibration</span><span class="py-chip">Quantile regression</span><span class="py-chip">SARIMA</span><span class="py-chip">Non-parametric testing (Friedman, Wilcoxon)</span></div>
+<div class="py-skill"><span class="py-skill-k">Tools</span><span class="py-chip">LaTeX</span><span class="py-chip">Git</span></div>
+</div>
 
-Awards and Fellowships
-======
-* **Best Student Paper Award**, ICT4AWE (8th Int. Conf. on ICT for Ageing Well and e-Health) | 2022
-* **Junior Research Fellowship (JRF)**, CSIR | 2019
-* **CSIR–NET, Mathematical Sciences** — All India Rank 158 | 2019
-* **IIT–JAM, Mathematics** — All India Rank 598 | 2019
-
-Technical Skills
-======
-* **Programming:** Python, R 
-* **ML / DL Frameworks:** PyTorch, TensorFlow, scikit-learn
-* **Methodologies:** Imbalanced learning, oversampling (SMOTE variants, GANs, VAEs, diffusion), KANs, cost-sensitive thresholding, probability calibration, quantile regression, SARIMA, non-parametric statistical testing (Friedman, Wilcoxon)
-* **Tools:** LaTeX, Git
-
-Leadership and Service
-======
-* **General Secretary**, Hostel B3 | IIT Jodhpur (Sep 2024 – Oct 2025)
-* **Head**, Institute Dining Committee | IIT Jodhpur (Sep 2024 – Sep 2025)
-
-
+<h2 class="py-sec">More Details</h2>
+<div class="py-cv-links">
+<a class="py-cv-link" href="{{ base_path }}/research/"><i class="fa-solid fa-microscope" aria-hidden="true"></i><b>Research</b><span>Doctoral thesis, its four parts, and future directions</span></a>
+<a class="py-cv-link" href="{{ base_path }}/journey/"><i class="fa-solid fa-route" aria-hidden="true"></i><b>Academic Journey</b><span>Education, awards, examinations, and leadership</span></a>
+<a class="py-cv-link" href="{{ base_path }}/publications/"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><b>Publications</b><span>Journal papers, conference papers, and preprints</span></a>
+<a class="py-cv-link" href="{{ base_path }}/teaching/"><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i><b>Teaching</b><span>Teaching assistantships at IIT Jodhpur</span></a>
+<a class="py-cv-link" href="{{ base_path }}/talks/"><i class="fa-solid fa-microphone-lines" aria-hidden="true"></i><b>Talks</b><span>Conference presentations</span></a>
+<a class="py-cv-link" href="mailto:yadav.58@iitj.ac.in"><i class="fa-solid fa-envelope" aria-hidden="true"></i><b>Contact</b><span>yadav.58@iitj.ac.in</span></a>
+</div>
