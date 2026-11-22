@@ -18,7 +18,7 @@ author_profile: true
 <div class="py-jr-inst-head"><span class="py-jr-inst-name">Indian Institute of Technology Jodhpur</span><span class="py-jr-inst-sub">Department of Mathematics · 2019 – present</span></div>
 </div>
 <div class="py-jr-item py-jr-now">
-<span class="py-jr-date">Jan 2022 – Dec 2026 (Expected)</span>
+<span class="py-jr-date">Jan 2022 – Nov 2026 (Submitted)</span>
 <span class="py-jr-title">Ph.D. in Mathematics</span>
 <span class="py-jr-sub">Indian Institute of Technology Jodhpur</span>
 <span class="py-jr-note">Thesis: <em>Rare Regions in Learning and Decision-Making: Certified Oversampling, Local Support, and Thresholds</em> · <a href="{{ base_path }}/research/">About my research →</a></span>
