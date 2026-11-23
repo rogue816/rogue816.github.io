@@ -61,7 +61,8 @@ author_profile: false
     letter-spacing: 5px;
     margin: 0 0 22px 0;
   }
-  .py-intro { font-size: 1.2rem; line-height: 1.7; margin: 0 0 14px 0; }
+  .py-intro { font-size: 1.12rem; line-height: 1.68; margin: 0 0 12px 0; }
+  .py-intro em { color: var(--py-gold-soft); }
   .py-intro strong { color: var(--py-heading); font-weight: 500; }
   .py-cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
   .py-cta a {
@@ -269,8 +270,9 @@ author_profile: false
 <h1>Pankaj Yadav</h1>
 <div class="py-divider"></div>
 <p class="py-tagline">Probabilistic AI Research</p>
-<p class="py-intro">Hi! I am <strong>Pankaj Yadav</strong>, a PhD researcher working on mitigating AI data bias, statistical inference, and deep generative models. My work connects their theoretical foundations to practice through downstream applications, mainly in finance, climate, and healthcare, and I publish actively across these areas.</p>
-<p class="py-intro">I would love to collaborate on interdisciplinary ideas, so please feel free to get in touch and drop me a message.</p>
+<p class="py-intro">Hi! I am <strong>Pankaj Yadav</strong>, a PhD researcher working in artificial intelligence, with a strong mathematical background. My interest stems from classical probability theory and statistical inference, and from a simple question: how reliable is a model when its data is scarce, imbalanced, or extreme?</p>
+<p class="py-intro">To answer it, my work explores mitigating AI data bias, statistical inference, and deep generative models. I examine their theoretical foundations, translate them into algorithms, and test them empirically. Along the way, I have built oversampling frameworks for tabular data generation that connect the foundations of statistics and machine learning, and this work extends naturally to state-of-the-art generative AI. I then carry it into downstream applications, mainly in finance, climate, and healthcare, where rare events often carry the highest cost.</p>
+<p class="py-intro">Beyond research, I have served as a teaching assistant at IIT Jodhpur for undergraduate, postgraduate, and diploma courses in probability, statistics, linear algebra, financial engineering, and financial analytics. I welcome collaboration on interdisciplinary ideas, so please feel free to get in touch.</p>
 <div class="py-cta">
 <a class="py-solid" href="mailto:yadav.58@iitj.ac.in">Get in touch</a>
 <a href="{{ base_path }}/research/">My research</a>
